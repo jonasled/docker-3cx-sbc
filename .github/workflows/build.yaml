@@ -107,7 +107,7 @@ jobs:
           DOCKER_IMAGE: ${{ env.GHCR_REGISTRY }}/${{ env.IMAGE_NAME }}
         with:
           context: .
-          platforms: linux/amd64,linux/armhf,linux/arm64
+          platforms: linux/amd64,linux/armhf
           push: true
           tags: ${{ steps.get-tags.outputs.tags }}
           build-args: |
